@@ -55,6 +55,30 @@ From classics to the latest releases.</p>
                 </div>
             </section>
             <hr class="m-0" />
+            <audio id="song" src="../assets/music/Tropic Love - Diviners.mp3"></audio>
+
+<button onclick="toggleSong()" class="btn btn-primary">
+  <i class="fas fa-play" id="playIcon"></i> <span id="playText">Paly</span>
+</button>
+
+<script>
+function toggleSong() {
+  var audio = document.getElementById("Tropic Love - Diviners");
+  var icon = document.getElementById("playIcon");
+  var text = document.getElementById("playText");
+  
+  if (audio.paused) {
+    audio.play();
+    icon.className = "fas fa-pause";
+    text.innerText = "Pause";
+  } else {
+    audio.pause();
+    icon.className = "fas fa-play";
+    text.innerText = "Play";
+  }
+}
+</script>
+<hr class="m-0" />
 
             <!-- TV SHOWS -->
             <section class="resume-section" id="TVSHOWS">
