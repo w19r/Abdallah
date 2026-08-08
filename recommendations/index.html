@@ -54,16 +54,20 @@ From classics to the latest releases.</p>
                     </div>
                 </div>
             </section>
-            <hr class="m-0" />
-            <audio id="song" src="../assets/music/Tropic Love - Diviners.mp3"></audio>
+<hr class="m-0" />
 
-<button onclick="toggleSong()" class="btn btn-primary">
-  <i class="fas fa-play" id="playIcon"></i> <span id="playText">Paly</span>
-</button>
+<div class="text-center my-4">
+  <audio id="song" src="../assets/music/Tropic Love - Diviners.mp3"></audio>
+
+  <button onclick="toggleSong()" class="btn btn-outline-dark rounded-circle shadow-sm" style="width:60px; height:60px;">
+    <i class="fas fa-play" id="playIcon"></i>
+  </button>
+  <p class="mt-2 small text-muted" id="playText">Play</p>
+</div>
 
 <script>
 function toggleSong() {
-  var audio = document.getElementById("Tropic Love - Diviners");
+  var audio = document.getElementById("song"); // هنا كان الغلط
   var icon = document.getElementById("playIcon");
   var text = document.getElementById("playText");
   
@@ -78,6 +82,7 @@ function toggleSong() {
   }
 }
 </script>
+
 <hr class="m-0" />
 
             <!-- TV SHOWS -->
