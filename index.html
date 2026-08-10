@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,24 +14,56 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- RTL & Language Switcher Custom Styles -->
+        <style>
+            [dir="rtl"] #sideNav {
+                left: auto;
+                right: 0;
+            }
+            [dir="rtl"] body {
+                padding-left: 0;
+                padding-right: 17rem;
+                text-align: right;
+            }
+            @media (max-width: 992px) {
+                [dir="rtl"] body {
+                    padding-right: 0;
+                }
+            }
+            [dir="rtl"] .fa-ul {
+                margin-right: 0;
+                margin-left: 1rem;
+            }
+            [dir="rtl"] .fa-li {
+                right: -2em;
+                left: auto;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">ABDALLAH ALAYDI</span>
+                <span class="d-block d-lg-none" data-i18n="nav_brand_name">ABDALLAH ALAYDI</span>
                 <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile1.jpg" alt="..." /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses">COURSES & CERTIFICATIONS</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#vision">VISION & GOALS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education" data-i18n="nav_education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses" data-i18n="nav_courses">COURSES & CERTIFICATIONS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills" data-i18n="nav_skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#vision" data-i18n="nav_vision">VISION & GOALS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="recommendations/" data-i18n="nav_picks">My Picks 🎬🎵</a></li>
                     
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="recommendations/">My Picks 🎬🎵</a></li>
+                    <!-- Language Switcher Buttons -->
+                    <li class="nav-item mt-4 px-3">
+                        <div class="btn-group w-100" role="group" aria-label="Language Switcher">
+                            <button type="button" class="btn btn-outline-light btn-sm lang-btn" id="lang-en" onclick="changeLanguage('en')">EN</button>
+                            <button type="button" class="btn btn-outline-light btn-sm lang-btn" id="lang-ar" onclick="changeLanguage('ar')">عربي</button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -41,14 +73,14 @@
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        ABDALLAH
-                        <span class="text-primary">ALAYDI</span>
+                        <span data-i18n="about_name1">ABDALLAH</span>
+                        <span class="text-primary" data-i18n="about_name2">ALAYDI</span>
                     </h1>
                     <div class="subheading mb-5">
-                        Gaza Palestine · (970) 592317956 ·
+                        <span data-i18n="about_location">Gaza Palestine</span> · (970) 592317956 ·
                         <a href="mailto:abdallahalaydi@icloud.com">abdallahalaydi@icloud.com</a>
                     </div>
-                    <p class="lead mb-5"> A Computer Systems Engineering student at Al-Azhar University in Gaza. 
+                    <p class="lead mb-5" data-i18n="about_desc"> A Computer Systems Engineering student at Al-Azhar University in Gaza. 
 I am passionate about technology and building practical solutions. 
 Currently focused on web development, programming, and learning new tools to grow my skills. 
 I enjoy working on projects that solve real problems and I am always looking to learn and collaborate.</p>
@@ -70,22 +102,22 @@ I enjoy working on projects that solve real problems and I am always looking to 
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
+                    <h2 class="mb-5" data-i18n="edu_title">Education</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">AL-AZHAR UNIVERSITY – GAZA</h3>
-                            <div class="subheading mb-3">BACHELOR OF COMPUTER SYSTEMS ENGINEERING</div>
-                            <p>Current Student</p>
+                            <h3 class="mb-0" data-i18n="uni_name">AL-AZHAR UNIVERSITY – GAZA</h3>
+                            <div class="subheading mb-3" data-i18n="uni_deg">BACHELOR OF COMPUTER SYSTEMS ENGINEERING</div>
+                            <p data-i18n="uni_status">Current Student</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2026 – Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" data-i18n="uni_period">2026 – Present</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">SHAHDAA AL-ZAYTOON SECONDARY SCHOOL</h3>
-                            <div class="subheading mb-3">GENERAL SECONDARY EDUCATION (TAWJIHI)</div>
-                            <p>Grade: 88.7%</p>
+                            <h3 class="mb-0" data-i18n="school_name">SHAHDAA AL-ZAYTOON SECONDARY SCHOOL</h3>
+                            <div class="subheading mb-3" data-i18n="school_deg">GENERAL SECONDARY EDUCATION (TAWJIHI)</div>
+                            <p data-i18n="school_grade">Grade: 88.7%</p>
                             <a href="assets/img/tawjihi.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-file-pdf me-1"></i> View Tawjihi Certificate
+                                <i class="fas fa-file-pdf me-1"></i> <span data-i18n="view_tawjihi">View Tawjihi Certificate</span>
                             </a>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2023 – 2024</span></div>
@@ -97,23 +129,23 @@ I enjoy working on projects that solve real problems and I am always looking to 
             <!-- COURSES & CERTIFICATIONS-->
             <section class="resume-section" id="courses">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">COURSES & CERTIFICATIONS</h2>
+                    <h2 class="mb-5" data-i18n="courses_main_title">COURSES & CERTIFICATIONS</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Using Python to Access Web Data</h3>
-                            <div class="subheading mb-3">University of Michigan | Coursera</div>
+                            <h3 class="mb-0" data-i18n="c1_title">Using Python to Access Web Data</h3>
+                            <div class="subheading mb-3" data-i18n="c1_sub">University of Michigan | Coursera</div>
                             <a href="https://www.coursera.org/account/accomplishments/records/SWN2DO7ZSCK7" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-certificate me-1"></i> Credential ID
+                                <i class="fas fa-certificate me-1"></i> <span data-i18n="credential_id">Credential ID</span>
                             </a>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2026 Jul</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Python Data Structures</h3>
-                            <div class="subheading mb-3">University of Michigan | Coursera</div>
+                            <h3 class="mb-0" data-i18n="c2_title">Python Data Structures</h3>
+                            <div class="subheading mb-3" data-i18n="c2_sub">University of Michigan | Coursera</div>
                             <a href="https://www.coursera.org/account/accomplishments/records/W552O05CWB0H" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-certificate me-1"></i> Credential ID
+                                <i class="fas fa-certificate me-1"></i> <span data-i18n="credential_id">Credential ID</span>
                             </a>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2026 Jul</span></div>
@@ -121,10 +153,10 @@ I enjoy working on projects that solve real problems and I am always looking to 
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Programming for Everybody (Getting Started with Python)</h3>
-                            <div class="subheading mb-3">University of Michigan | Coursera</div>
+                            <h3 class="mb-0" data-i18n="c3_title">Programming for Everybody (Getting Started with Python)</h3>
+                            <div class="subheading mb-3" data-i18n="c3_sub">University of Michigan | Coursera</div>
                             <a href="https://www.coursera.org/account/accomplishments/records/KB5PZL5NF79I" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-certificate me-1"></i> Credential ID
+                                <i class="fas fa-certificate me-1"></i> <span data-i18n="credential_id">Credential ID</span>
                             </a>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2026 Jun</span></div>
@@ -132,10 +164,10 @@ I enjoy working on projects that solve real problems and I am always looking to 
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">MATHEMATICAL THINKING IN COMPUTER SCIENCE</h3>
-                            <div class="subheading mb-3">UC SAN DIEGO | Coursera</div>
+                            <h3 class="mb-0" data-i18n="c4_title">MATHEMATICAL THINKING IN COMPUTER SCIENCE</h3>
+                            <div class="subheading mb-3" data-i18n="c4_sub">UC SAN DIEGO | Coursera</div>
                             <a href="https://www.coursera.org/account/accomplishments/records/U5TMEH1WIAOM" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-certificate me-1"></i> Credential ID
+                                <i class="fas fa-certificate me-1"></i> <span data-i18n="credential_id">Credential ID</span>
                             </a>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2026 Jun</span></div>
@@ -143,11 +175,11 @@ I enjoy working on projects that solve real problems and I am always looking to 
 
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Cambridge English Programme 12 Levels</h3>
-                            <div class="subheading mb-3">Cambridge Training College ctcbritain</div>
-                            <p>Credential ID: 25032066154</p>
+                            <h3 class="mb-0" data-i18n="c5_title">Cambridge English Programme 12 Levels</h3>
+                            <div class="subheading mb-3" data-i18n="c5_sub">Cambridge Training College ctcbritain</div>
+                            <p data-i18n="c5_id">Credential ID: 25032066154</p>
                             <a href="assets/img/english.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-file-pdf me-1"></i> View the Certificate
+                                <i class="fas fa-file-pdf me-1"></i> <span data-i18n="view_cert">View the Certificate</span>
                             </a>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2021 – 2022</span></div>
@@ -156,119 +188,272 @@ I enjoy working on projects that solve real problems and I am always looking to 
             </section>
             <hr class="m-0" />
 
-            
             <!-- Skills-->
-<section class="resume-section" id="skills">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Skills</h2>
-        
-        <div class="subheading mb-3">Programming Languages & Tools</div>
-        <ul class="list-inline dev-icons">
-            <li class="list-inline-item"><i class="fab fa-python"></i></li>
-            <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-            
-            <li class="list-inline-item"><i class="fab fa-github"></i></li>
-            <li class="list-inline-item"><i class="fab fa-linux"></i></li>
-        </ul>
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5" data-i18n="skills_title">Skills</h2>
+                    
+                    <div class="subheading mb-3" data-i18n="prog_tools">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-linux"></i></li>
+                    </ul>
 
-        <div class="subheading mb-3 mt-5">Technical Skills</div>
-        <ul class="fa-ul mb-0">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Python Programming</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Web Development: HTML</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Data Formats: XML, JSON</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Algorithms</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Data Structures </li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Problem Solving </li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Computer Programming</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Network Protocols & RESTful APIs</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span> Applied Mathematics & Computational Logic</li>
-            
-        </ul>
-    </div>
-</section>
+                    <div class="subheading mb-3 mt-5" data-i18n="tech_skills">Technical Skills</div>
+                    <ul class="fa-ul mb-0">
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s1">Python Programming</span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s2">Web Development: HTML</span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s3">Data Formats: XML, JSON</span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s4">Algorithms</span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s5">Data Structures </span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s6">Problem Solving </span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s7">Computer Programming</span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s8">Network Protocols & RESTful APIs</span></li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span> <span data-i18n="s9">Applied Mathematics & Computational Logic</span></li>
+                    </ul>
+                </div>
+            </section>
             <hr class="m-0" />
 
             <!-- Vision -->
-<section class="resume-section" id="vision">
-    <div class="resume-section-content">
-        <h2 class="mb-5">VISION & GOALS</h2>
-        
-        <div class="mb-5">
-            <h3 class="mb-3 text-primary"><i class="fas fa-eye me-2"></i>Vision</h3>
-            <p class="lead" style="font-size: 1.25rem; line-height: 1.8;">
-                To become a technology driven engineer who combines creativity, problem solving, 
-                and continuous learning to build meaningful solutions that create a positive impact 
-                on people and communities.
-            </p>
-        </div>
+            <section class="resume-section" id="vision">
+                <div class="resume-section-content">
+                    <h2 class="mb-5" data-i18n="vision_main_title">VISION & GOALS</h2>
+                    
+                    <div class="mb-5">
+                        <h3 class="mb-3 text-primary"><i class="fas fa-eye me-2"></i><span data-i18n="vision_h">Vision</span></h3>
+                        <p class="lead" style="font-size: 1.25rem; line-height: 1.8;" data-i18n="vision_p">
+                            To become a technology driven engineer who combines creativity, problem solving, 
+                            and continuous learning to build meaningful solutions that create a positive impact 
+                            on people and communities.
+                        </p>
+                    </div>
 
-        <div>
-            <h3 class="mb-3 text-primary"><i class="fas fa-bullseye me-2"></i>Goals</h3>
-            <ul class="fa-ul">
-                <li class="mb-3">
-                    <span class="fa-li"><i class="fas fa-graduation-cap text-warning"></i></span>
-                    Develop strong expertise in software engineering, computer science, and emerging technologies.
-                </li>
-                <li class="mb-3">
-                    <span class="fa-li"><i class="fas fa-lightbulb text-warning"></i></span>
-                    Build innovative projects that transform ideas into practical and valuable digital solutions.
-                </li>
-                <li class="mb-3">
-                    <span class="fa-li"><i class="fas fa-chart-line text-warning"></i></span>
-                    Continuously improve my technical, analytical, and leadership skills through learning and real world experience.
-                </li>
-                <li class="mb-3">
-                    <span class="fa-li"><i class="fas fa-users text-warning"></i></span>
-                    Collaborate with talented individuals and contribute to projects that inspire progress and innovation.
-                </li>
-                <li class="mb-3">
-                    <span class="fa-li"><i class="fas fa-rocket text-warning"></i></span>
-                    Pursue excellence by embracing challenges, adapting to change, and growing every day.
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+                    <div>
+                        <h3 class="mb-3 text-primary"><i class="fas fa-bullseye me-2"></i><span data-i18n="goals_h">Goals</span></h3>
+                        <ul class="fa-ul">
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-graduation-cap text-warning"></i></span>
+                                <span data-i18n="g1">Develop strong expertise in software engineering, computer science, and emerging technologies.</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-lightbulb text-warning"></i></span>
+                                <span data-i18n="g2">Build innovative projects that transform ideas into practical and valuable digital solutions.</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-chart-line text-warning"></i></span>
+                                <span data-i18n="g3">Continuously improve my technical, analytical, and leadership skills through learning and real world experience.</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-users text-warning"></i></span>
+                                <span data-i18n="g4">Collaborate with talented individuals and contribute to projects that inspire progress and innovation.</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-rocket text-warning"></i></span>
+                                <span data-i18n="g5">Pursue excellence by embracing challenges, adapting to change, and growing every day.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <hr class="m-0" />
-
-            
     
             <!-- Footer -->
-<footer class="bg-white text-center py-5 border-top">
-    <div class="container">
-        
-        <!-- Download CV Link -->
-        <div class="mb-4">
-            <a href="assets/files/Cv.pdf" target="_blank" class="text-decoration-none" style="color: #bd5d38; font-size: 1.1rem; font-weight: 600;">
-                <i class="fas fa-download me-2"></i> Download CV
-            </a>
+            <footer class="bg-white text-center py-5 border-top">
+                <div class="container">
+                    <!-- Download CV Link -->
+                    <div class="mb-4">
+                        <a href="assets/files/Cv.pdf" target="_blank" class="text-decoration-none" style="color: #bd5d38; font-size: 1.1rem; font-weight: 600;">
+                            <i class="fas fa-download me-2"></i> <span data-i18n="download_cv">Download CV</span>
+                        </a>
+                    </div>
+
+                    <!-- Follow Me -->
+                    <h5 class="text-dark mb-4" style="font-size: 1rem;" data-i18n="follow_me">Follow Me</h5>
+                    <div class="social-icons mb-4">
+                        <a class="social-icon" href="https://www.facebook.com/1w19r" target="_blank" aria-label="Facebook" style="background: #bd5d38;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="social-icon" href="https://www.instagram.com/1w19r" target="_blank" aria-label="Instagram" style="background: #bd5d38;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="social-icon" href="https://www.tiktok.com/@w19r" target="_blank" aria-label="TikTok" style="background: #bd5d38;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a class="social-icon" href="https://www.youtube.com/@W19RT" target="_blank" aria-label="YouTube" style="background: #bd5d38;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- Copyright -->
+                    <p class="text-muted small mb-0" data-i18n="copyright">© 2026 ABDALLAH ALAYDI. All Rights Reserved.</p>
+                </div>
+            </footer>
         </div>
 
-        <!-- Follow Me -->
-        <h5 class="text-dark mb-4" style="font-size: 1rem;">Follow Me</h5>
-        <div class="social-icons mb-4">
-            <a class="social-icon" href="https://www.facebook.com/1w19r" target="_blank" aria-label="Facebook" style="background: #bd5d38;">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a class="social-icon" href="https://www.instagram.com/1w19r" target="_blank" aria-label="Instagram" style="background: #bd5d38;">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a class="social-icon" href="https://www.tiktok.com/@w19r" target="_blank" aria-label="TikTok" style="background: #bd5d38;">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a class="social-icon" href="https://www.youtube.com/@W19RT" target="_blank" aria-label="YouTube" style="background: #bd5d38;">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-
-        <!-- Copyright -->
-        <p class="text-muted small mb-0">© 2026 ABDALLAH ALAYDI. All Rights Reserved.</p>
-    </div>
-</footer>
-        </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Translation Script (i18n) -->
+        <script>
+            const translations = {
+                en: {
+                    nav_brand_name: "ABDALLAH ALAYDI",
+                    nav_about: "About",
+                    nav_education: "Education",
+                    nav_courses: "COURSES & CERTIFICATIONS",
+                    nav_skills: "Skills",
+                    nav_vision: "VISION & GOALS",
+                    nav_picks: "My Picks 🎬🎵",
+                    about_name1: "ABDALLAH",
+                    about_name2: "ALAYDI",
+                    about_location: "Gaza Palestine",
+                    about_desc: "A Computer Systems Engineering student at Al-Azhar University in Gaza. I am passionate about technology and building practical solutions. Currently focused on web development, programming, and learning new tools to grow my skills. I enjoy working on projects that solve real problems and I am always looking to learn and collaborate.",
+                    edu_title: "Education",
+                    uni_name: "AL-AZHAR UNIVERSITY – GAZA",
+                    uni_deg: "BACHELOR OF COMPUTER SYSTEMS ENGINEERING",
+                    uni_status: "Current Student",
+                    uni_period: "2026 – Present",
+                    school_name: "SHAHDAA AL-ZAYTOON SECONDARY SCHOOL",
+                    school_deg: "GENERAL SECONDARY EDUCATION (TAWJIHI)",
+                    school_grade: "Grade: 88.7%",
+                    view_tawjihi: "View Tawjihi Certificate",
+                    courses_main_title: "COURSES & CERTIFICATIONS",
+                    c1_title: "Using Python to Access Web Data",
+                    c1_sub: "University of Michigan | Coursera",
+                    credential_id: "Credential ID",
+                    c2_title: "Python Data Structures",
+                    c2_sub: "University of Michigan | Coursera",
+                    c3_title: "Programming for Everybody (Getting Started with Python)",
+                    c3_sub: "University of Michigan | Coursera",
+                    c4_title: "MATHEMATICAL THINKING IN COMPUTER SCIENCE",
+                    c4_sub: "UC SAN DIEGO | Coursera",
+                    c5_title: "Cambridge English Programme 12 Levels",
+                    c5_sub: "Cambridge Training College ctcbritain",
+                    c5_id: "Credential ID: 25032066154",
+                    view_cert: "View the Certificate",
+                    skills_title: "Skills",
+                    prog_tools: "Programming Languages & Tools",
+                    tech_skills: "Technical Skills",
+                    s1: "Python Programming",
+                    s2: "Web Development: HTML",
+                    s3: "Data Formats: XML, JSON",
+                    s4: "Algorithms",
+                    s5: "Data Structures",
+                    s6: "Problem Solving",
+                    s7: "Computer Programming",
+                    s8: "Network Protocols & RESTful APIs",
+                    s9: "Applied Mathematics & Computational Logic",
+                    vision_main_title: "VISION & GOALS",
+                    vision_h: "Vision",
+                    vision_p: "To become a technology driven engineer who combines creativity, problem solving, and continuous learning to build meaningful solutions that create a positive impact on people and communities.",
+                    goals_h: "Goals",
+                    g1: "Develop strong expertise in software engineering, computer science, and emerging technologies.",
+                    g2: "Build innovative projects that transform ideas into practical and valuable digital solutions.",
+                    g3: "Continuously improve my technical, analytical, and leadership skills through learning and real world experience.",
+                    g4: "Collaborate with talented individuals and contribute to projects that inspire progress and innovation.",
+                    g5: "Pursue excellence by embracing challenges, adapting to change, and growing every day.",
+                    download_cv: "Download CV",
+                    follow_me: "Follow Me",
+                    copyright: "© 2026 ABDALLAH ALAYDI. All Rights Reserved."
+                },
+                ar: {
+                    nav_brand_name: "عبد الله العايدي",
+                    nav_about: "عني",
+                    nav_education: "التعليم",
+                    nav_courses: "الدورات والشهادات",
+                    nav_skills: "المهارات",
+                    nav_vision: "الرؤية والأهداف",
+                    nav_picks: "اختياراتي 🎬🎵",
+                    about_name1: "عبد الله",
+                    about_name2: "العايدي",
+                    about_location: "غزة، فلسطين",
+                    about_desc: "طالب هندسة نظم حاسوب في جامعة الأزهر بغزة. شغوف بالتكنولوجيا وبناء حلول عمليّة. أركز حالياً على تطوير الويب، البرمجة، وتعلم أدوات جديدة لتطوير مهاراتي. أستمتع بالعمل على مشاريع تحل مشاكل حقيقية، وأسعى دائماً للتعلم والتعاون.",
+                    edu_title: "التعليم",
+                    uni_name: "جامعة الأزهر – غزة",
+                    uni_deg: "بكالوريوس هندسة نظم الحاسوب",
+                    uni_status: "طالب حالياً",
+                    uni_period: "2026 – الآن",
+                    school_name: "مدرسة شهداء الزيتون الثانوية للبنين",
+                    school_deg: "الثانوية العامة الفلسطينية (التوجيهي)",
+                    school_grade: "المعدل: 88.7%",
+                    view_tawjihi: "عرض شهادة التوجيهي",
+                    courses_main_title: "الدورات والشهادات المعتمدة",
+                    c1_title: "استخدام لغة بايثون للوصول إلى بيانات الويب",
+                    c1_sub: "جامعة ميشيغان | منصة كورسيرا",
+                    credential_id: "رقم الاعتماد",
+                    c2_title: "هياكل البيانات في لغة بايثون",
+                    c2_sub: "جامعة ميشيغان | منصة كورسيرا",
+                    c3_title: "البرمجة للجميع (البداية مع لغة بايثون)",
+                    c3_sub: "جامعة ميشيغان | منصة كورسيرا",
+                    c4_title: "التفكير الرياضي في علوم الحاسوب",
+                    c4_sub: "جامعة كاليفورنيا، سان دييغو | منصة كورسيرا",
+                    c5_title: "برنامج كامبريدج للغة الإنجليزية (12 مستوى)",
+                    c5_sub: "مركز تدريب كامبريدج ctcbritain",
+                    c5_id: "رقم الاعتماد: 25032066154",
+                    view_cert: "عرض الشهادة",
+                    skills_title: "المهارات",
+                    prog_tools: "لغات البرمجة والأدوات",
+                    tech_skills: "المهارات التقنية",
+                    s1: "برمجة بايثون",
+                    s2: "تطوير الويب: HTML",
+                    s3: "تنسيقات البيانات: XML, JSON",
+                    s4: "الخوارزميات",
+                    s5: "هياكل البيانات",
+                    s6: "حل المشكلات",
+                    s7: "برمجة الحاسوب",
+                    s8: "بروتوكولات الشبكة و RESTful APIs",
+                    s9: "الرياضيات التطبيقية والمنطق الحسابي",
+                    vision_main_title: "الرؤية والأهداف",
+                    vision_h: "الرؤية",
+                    vision_p: "أن أصبح مهندساً مدفوعاً بالتكنولوجيا يجمع بين الإبداع، وحل المشكلات، والتعلم المستمر لبناء حلول ذات معنى تُحدث تأثيراً إيجابياً على الأفراد والمجتمعات.",
+                    goals_h: "الأهداف",
+                    g1: "تطوير خبرة قوية في هندسة البرمجيات، علوم الحاسوب، والتقنيات الناشئة.",
+                    g2: "بناء مشاريع مبتكرة تحول الأفكار إلى حلول رقمية عمليّة وقيمة.",
+                    g3: "التطوير المستمر لمهاراتي التقنية والتحليلية والقيادية من خلال التعلم والخبرة الواقعية.",
+                    g4: "التعاون مع أفراد موهوبين والمساهمة في مشاريع تلهم التقدم والابتكار.",
+                    g5: "السعي نحو التميز عبر مواجهة التحديات، التكيف مع التغيير، والنمو كل يوم.",
+                    download_cv: "تحميل السيرة الذاتية (CV)",
+                    follow_me: "تابعني",
+                    copyright: "© 2026 عبد الله العايدي. جميع الحقوق محفوظة."
+                }
+            };
+
+            function changeLanguage(lang) {
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+
+                localStorage.setItem('preferred_lang', lang);
+                
+                // Active button styling
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active', 'btn-primary');
+                    btn.classList.add('btn-outline-light');
+                });
+                const activeBtn = document.getElementById('lang-' + lang);
+                if (activeBtn) {
+                    activeBtn.classList.remove('btn-outline-light');
+                    activeBtn.classList.add('active', 'btn-primary');
+                }
+            }
+
+            // Load saved language on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('preferred_lang') || 'en';
+                changeLanguage(savedLang);
+            });
+        </script>
     </body>
 </html>
