@@ -1,7 +1,7 @@
 # Abdallah Alaydi
 
 <p align="center">
-  <img src="https://abdallahalaydi.com/favicon.ico" width="100"/>
+  <img src="https://abdallahalaydi.com/assets/img/profile1.jpg" width="100"/>
 </p>
 
 <p align="center">
