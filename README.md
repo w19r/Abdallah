@@ -11,35 +11,36 @@
 <p align="center">
   <a href="https://abdallahalaydi.com">🌐 Website</a> •
   <a href="https://github.com/w19r">💻 GitHub</a> •
-  <a href="mailto:your-email@example.com">📧 Email</a>
+  <a href="mailto:Abdallahalaydi@icloud.com">📧 Email</a>
 </p>
 
 ---
 
 ### 👋 About Me
 طالب هندسة برمجيات مهتم بتطوير البرمجيات وبناء تطبيقات ويب عملية. 
-بحب اتعلم تقنيات جديدة وبحول الافكار لمشاريع حقيقية باستخدام Python و JavaScript.
-هدفي اني اصير مطور فول-ستاك وابني منتجات بتفيد الناس.
+بحب اتعلم تقنيات جديدة وبحول الافكار لمشاريع حقيقية باستخدام Python.
+هدفي اني اصير مطور فول-ستاك .
 
 ### 🚀 Tech Stack
-**Languages:** Python, JavaScript, HTML, CSS  
-**Frameworks:** React, Flask, Django  
+**Languages:** Python, CSS  
 **Tools:** Git, GitHub, VS Code, Coursera
 
-### 📌 Featured Projects
-1. **[اسم المشروع 1]** - وصف سريع عنه
-   [Live Demo](link) | [Code](link)
-2. **[اسم المشروع 2]** - وصف سريع عنه
-   [Live Demo](link) | [Code](link)
+### 📌 Currently Learning & Building
+بشتغل حاليا على تطوير مهاراتي في Python وتطوير الويب. 
+قريبا رح انزل مشاريع جديدة هان 👇
 
 ### 📜 Certificates
-- Python for Everybody - University of Michigan - Coursera x4
-- Programming for Everybody
+- **Python for Everybody** - University of Michigan - Coursera x5
+- **Programming for Everybody** - University of Michigan - Coursera
 
 ### 📫 Let's Connect
-لو حابب تتعاون او عندك فكرة مشروع تواصل معي:  
-**Website:** [abdallahalaydi.com](https://abdallahalaydi.com)
+ تواصل معي:  
+**Website:** [abdallahalaydi.com](https://abdallahalaydi.com)  
+**Email:** Abdallahalaydi@icloud.com
 
 ---
 
-<p align="center">Made with ❤️ by Abdallah</p>
+<p align="center">
+  Abdallah Alaydi <br>
+  © 2026 All Rights Reserved
+</p>
